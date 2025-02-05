@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    /* color:black; */
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 2rem 4rem;
+    /* z-index: 100; */
+    /* background-color: black; */
+}
+
+header a{
+    transition: all 0.4s ease;
+}
+header a:hover{
+    transform:scale(1.04);
+}
+
+header .logo {
+    color: #ffc107;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+nav a {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-left: 4rem;
+}
+
+nav a:hover,
+a.project {
+    color: #ffc107;
+}
+
+nav span {
+    display: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 15rem 4rem;
+}
+
+main p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin:0 70px 55px;
+}
+
+/* .card-sec { */
+    /* display: flex; */
+    /* align-items: center;
+    flex-direction: column; */
+    /* justify-content:space-around; */
+/* } */
+
+/* .row{ */
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    /* margin-top: 2rem; */
+
+/* } */
+
+/* .card1,
+.card2,
+.card3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+} */
+
+
+/* .card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+} */
+
+/* .c-img {
+    height: 400px;
+    width: 300px;
+} */
+
+
+.container h2{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 3rem; */
+    margin-top: -2rem;
+    /* padding-left: 1.7rem; */
+}
+.container p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+}
+.container .subtitle{
+    font-weight: 600;
+}
+button{
+
+    margin-top:2rem;
+    /* margin-left: 1.7rem; */
+    border:1px solid white;
+    border-radius: 5px;
+    padding: 7px 15px; /* increased the size of cause the text was moving on hover */
+    background-color: white;
+    color: #000000;
+    transition: transform 0.3s ease-in-out;
+   /* transform-origin: center; */   /* COMMENT used cause the text was moving on hover */
+    will-change: transform;   /*COMMENT used cause the text was moving on hover */
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255,255,255,0.1);
+    border: 1px solid #fff;
+    color:#fff;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    user-select: none;
+    height:40rem;
+    width:30rem;
+    /* background-color:#ffc107; */
+    border-radius: 5px;
+    border:1px solid rgb(255,255,255,0.5) ;
+    overflow:hidden;
+    background: rgb(255,255,255,0.2);
+    backdrop-filter:blur(30px);
+}
+
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30rem;
+    width: 30rem;
+    /* background-color: #ffc107; */
+}
+img{
+    border-radius: 50%;
+    height: 20rem;
+    width: 20rem;
+}
+
+.slider-wrapper .swiper-pagination-bullet{
+    background-color: #fff;
+    height:15px;
+    width: 15px;
+}
+.slider-wrapper .swiper-slide-button{
+    color: #fff;
+    margin-top: -50px;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover{
+    color:#ffc107;
+}
+
+@media(max-width: 768px){
+    .slider-wrapper{
+        margin: 0 10px 40px;
+    }
+    .slider-wrapper .swiper-slide-button{
+        display: none;
+    }
+}

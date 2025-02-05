@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <style>
+        /* Basic styling for the navbar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: black;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect */
+        .navbar a:hover {
+            color: yellow;
+        }
+
+   
+        .navbar a.active {
+            color: yellow;
+        }
+
+        .navbar a:hover ~ a.active{
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html"class="active">Home</a>
+        <a href="about.html" >About</a>
+        <a href="contact.html">Contact</a>
+
+
+    </div>
+
+    <div>
+        <!-- Content of the current page -->
+        <h1>About Page</h1>
+        <p>This is the about page content.</p>
+    </div>
+    <script>
+        let links = document.querySelectorAll('.navbar a');
+
+        links.forEach((link) => {
+            link.addEventListener('mouseover', () => {
+                links.forEach((l) => {
+                    if (l !== link && l.classList.contains('active')) {
+                        l.style.color = 'black';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
